@@ -11,7 +11,7 @@ bundle exec jekyll serve
 
 The site will be available at `http://localhost:4000`.
 
-If you are on Ruby 3.0.x, the Gemfile pins `github-pages`, `activesupport`, and `bigdecimal` to compatible versions.
+If you are on Ruby 3.0.x, the Gemfile pins `github-pages`, `activesupport`, `bigdecimal`, and `http_parser.rb` to compatible versions.
 
 ## Publishing
 
