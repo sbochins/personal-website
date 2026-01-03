@@ -3,6 +3,8 @@ title: Blog
 permalink: /blog/
 ---
 
+<p class="lede">Essays and short notes on the craft of software engineering, leadership, and the small decisions that compound over time.</p>
+
 <ul class="post-list">
   {% for post in site.posts %}
   <li>
