@@ -1,0 +1,27 @@
+title: Stephen Bochinski
+email: ""
+description: "Blog"
+baseurl: ""
+url: ""
+
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
