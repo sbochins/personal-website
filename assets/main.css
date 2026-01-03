@@ -20,6 +20,11 @@ body {
   line-height: 1.7;
 }
 
+.page,
+.content {
+  animation: fade-up 520ms ease-out both;
+}
+
 .page {
   min-height: 100vh;
   display: flex;
@@ -31,6 +36,25 @@ body {
   width: 100%;
   max-width: var(--content-width);
   margin: 40px auto 60px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 12px;
+  background: #ffffff;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--rule);
+  font-family: "Space Grotesk", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+  text-decoration: none;
+  z-index: 10;
+}
+
+.skip-link:focus {
+  left: 24px;
 }
 
 .site-nav {
@@ -85,6 +109,11 @@ p {
   margin: 0 0 18px;
 }
 
+.lede {
+  font-size: 20px;
+  color: var(--muted);
+}
+
 a {
   color: var(--accent);
 }
@@ -107,6 +136,51 @@ hr {
 
 .post-body {
   font-size: 19px;
+}
+
+.post-body h2,
+.post-body h3 {
+  margin-top: 32px;
+}
+
+.post-body blockquote {
+  margin: 24px 0;
+  padding: 0 18px;
+  border-left: 3px solid var(--accent-soft);
+  color: var(--muted);
+}
+
+.post-body code {
+  background: #efe7dc;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 0.95em;
+}
+
+.post-body pre {
+  background: #efe7dc;
+  padding: 16px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.post-body pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.post-body ul,
+.post-body ol {
+  padding-left: 20px;
+}
+
+.post-body li {
+  margin-bottom: 8px;
+}
+
+.post-body img {
+  max-width: 100%;
+  border-radius: 12px;
 }
 
 .post-list {
@@ -145,6 +219,24 @@ hr {
   padding-top: 24px;
   font-size: 14px;
   color: var(--muted);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page,
+  .content {
+    animation: none;
+  }
 }
 
 @media (max-width: 720px) {
