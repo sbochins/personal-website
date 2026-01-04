@@ -2,25 +2,9 @@
 title: Home
 ---
 
-<section class="home-hero">
-  <div>
-    <p class="lede"><strong>Stephen Bochinski</strong> builds dependable software systems and platforms. This is a clean, focused home for essays, notes, and project updates from decades in engineering.</p>
-    <p>If you're here for writing, start with the blog. If you want background on my work, the about page has a short overview.</p>
-    <div class="hero-actions">
-      <a class="button" href="{{ "/blog/" | relative_url }}">Read the blog</a>
-      <a class="button secondary" href="{{ "/about/" | relative_url }}">About me</a>
-    </div>
-  </div>
-  <aside class="hero-card">
-    <h3>Focus areas</h3>
-    <ul class="hero-list">
-      <li>Platform engineering</li>
-      <li>Scalable services</li>
-      <li>Developer experience</li>
-      <li>Technical leadership</li>
-    </ul>
-  </aside>
-</section>
+<p class="lede">Welcome. I'm Stephen Bochinski, a software engineer focused on building reliable, human-centered systems. This site is a simple home for essays, notes, and occasional updates.</p>
+
+If you're here for writing, start with the blog. If you'd like to know more about my background, the about page has a short overview.
 
 <hr>
 
