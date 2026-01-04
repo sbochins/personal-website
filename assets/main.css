@@ -93,19 +93,6 @@ body {
   border-bottom: 1px solid var(--ink);
 }
 
-.nav-cta {
-  padding: 6px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--rule);
-  background: #f4f7fb;
-  font-weight: 600;
-  color: var(--accent);
-}
-
-.nav-cta:hover {
-  border-bottom: 1px solid transparent;
-  border-color: #c6d6e4;
-}
 
 h1,
 h2,
