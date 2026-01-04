@@ -2,9 +2,7 @@
 title: Stephen Bochinski
 ---
 
-<p class="lede">Senior software engineer writing about scalable systems, developer platforms, and the craft of building software that lasts.</p>
-
-If you're here for writing, start with the blog. If you'd like to know more about my background, the about page has a short overview.
+<p class="lede">I like writing software and every once in a while like writing about it.</p>
 
 <hr>
 

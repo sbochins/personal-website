@@ -6,3 +6,4 @@ gem "github-pages", "~> 228", group: :jekyll_plugins
 gem "activesupport", "< 7.1"
 gem "bigdecimal", "< 4.0"
 gem "http_parser.rb", "< 0.8"
+gem "webrick", "~> 1.7"

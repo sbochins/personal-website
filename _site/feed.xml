@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-01-04T16:58:54-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Stephen Bochinski</title><subtitle>Blog</subtitle><author><name>Stephen Bochinski</name></author><entry><title type="html">AI Personas</title><link href="http://localhost:4000/blog/2026/01/02/ai-personas/" rel="alternate" type="text/html" title="AI Personas" /><published>2026-01-02T00:00:00-05:00</published><updated>2026-01-02T00:00:00-05:00</updated><id>http://localhost:4000/blog/2026/01/02/ai-personas</id><content type="html" xml:base="http://localhost:4000/blog/2026/01/02/ai-personas/">&lt;p&gt;I keep seeing teams lean on AI personas as if they are a substitute for sound engineering practice. The pattern is familiar: line up a “Product Manager,” “Senior Engineer,” and “QA” persona and let them talk it out. As much as I hate to admit it, I get the appeal. It feels like you are recreating a product team in a chat window. In practice, it rarely leads to better work.&lt;/p&gt;
+
+&lt;h2 id=&quot;personas-arent-a-capability-upgrade&quot;&gt;Personas aren’t a capability upgrade&lt;/h2&gt;
+
+&lt;p&gt;The core issue is simple: the model already has the capabilities those personas claim to represent. You do not get a smarter plan because you told the model to be a “Product Manager.” You get a different tone. Maybe a different format. But you do not get new knowledge, better reasoning, or a magically realistic process. You get the same model, wearing a different hat.&lt;/p&gt;
+
+&lt;p&gt;People mistake narrative for rigor. The conversation feels more structured, but the output quality doesn’t materially change.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-doll-analogy-in-good-faith&quot;&gt;The doll analogy (in good faith)&lt;/h2&gt;
+
+&lt;p&gt;Watching my kids play makes the analogy hard to unsee. They line up dolls, assign roles, and act out a story where each one has a job. It’s creative and fun. It also doesn’t constrain anything. The story works because they want it to work.&lt;/p&gt;
+
+&lt;p&gt;AI personas operate similarly. The model is improvising. You are telling it how to talk, not how to think. If the “Architect” tells the “Engineer” to “consider scalability,” that does not mean scalability got real analysis. It means the model wrote the word “scalability.”&lt;/p&gt;
+
+&lt;h2 id=&quot;where-agents-actually-help&quot;&gt;Where agents actually help&lt;/h2&gt;
+
+&lt;p&gt;Agents and subagents can be valuable, but not for role-play. They help manage context. They let you isolate a slice of the problem, preserve key details, and reduce the amount of irrelevant stuff the model has to juggle. That’s real leverage.&lt;/p&gt;
+
+&lt;p&gt;The problem is that most “persona” workflows are not doing this. They are not building a context management system. They are building a story.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-vibe-coding-trap&quot;&gt;The vibe coding trap&lt;/h2&gt;
+
+&lt;p&gt;You can see this clearly in “vibe coding” a website by spinning up a fake product team:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Product Manager persona for requirements&lt;/li&gt;
+  &lt;li&gt;Software Architect persona for system design&lt;/li&gt;
+  &lt;li&gt;Software Engineer persona for implementation&lt;/li&gt;
+  &lt;li&gt;QA persona for testing&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It’s theater. The model already has those capabilities, and it’s the same model in each step. You didn’t create a team. You created a script.&lt;/p&gt;
+
+&lt;p&gt;If you want better output, focus on what actually changes the model’s behavior:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Provide tighter context, not a title.&lt;/li&gt;
+  &lt;li&gt;Ask for constraints, not ceremony.&lt;/li&gt;
+  &lt;li&gt;Break work into smaller, concrete steps.&lt;/li&gt;
+  &lt;li&gt;Specify the format and trade-offs you care about.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That is how you reduce hallucinations and improve outcomes.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-more-honest-approach&quot;&gt;A more honest approach&lt;/h2&gt;
+
+&lt;p&gt;If you like personas because they help you think, fine. But call it what it is: a prompt style. If you want real leverage, invest in context management and decomposition. It’s less fun than pretending your AI is a team, but it’s far more effective.&lt;/p&gt;
+
+&lt;p&gt;At some point, you have to decide whether you want a story or a result. The dolls are great for play. They are not great for work.&lt;/p&gt;</content><author><name>Stephen Bochinski</name></author><summary type="html">I keep seeing teams lean on AI personas as if they are a substitute for sound engineering practice. The pattern is familiar: line up a “Product Manager,” “Senior Engineer,” and “QA” persona and let them talk it out. As much as I hate to admit it, I get the appeal. It feels like you are recreating a product team in a chat window. In practice, it rarely leads to better work.</summary></entry></feed>

@@ -3,6 +3,7 @@ title: About
 permalink: /about/
 ---
 
-I build software with an emphasis on clarity, durability, and pragmatic design. Over the years I've focused on large-scale systems, developer platforms, and the craft of shipping tools that teams can rely on.
+I'm a Software Engineer at Meta. I previously worked at Google and several other companies.
 
-This site will evolve into a small archive of lessons learned, thoughtful takes on engineering, and a record of projects I care about.
+I'm mostly interested in AI advancements from a software engineering perspective. I'm currently working on ways to make it better and
+ultimately eliminate my livelihood.
