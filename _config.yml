@@ -2,7 +2,7 @@ title: Stephen Bochinski
 email: ""
 description: "Blog"
 baseurl: ""
-url: ""
+url: "https://stephen.bochinski.dev"
 
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/

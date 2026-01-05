@@ -9,4 +9,11 @@ layout: default
   <div class="post-body">
     {{ content }}
   </div>
+  <footer class="post-footer">
+    <p>
+      <a href="https://hn.algolia.com/?query={{ page.url | absolute_url | uri_escape }}">
+        Discuss on Hacker News
+      </a>
+    </p>
+  </footer>
 </article>
