@@ -20,3 +20,22 @@ Push commits to the `main` branch and GitHub Pages will build and deploy automat
 ## Custom domain
 
 Once you have a domain, add a `CNAME` file at the repo root containing your domain name and set the domain in the GitHub Pages settings.
+
+## Hacker News submission
+
+Use the Playwright helper to submit a new post (headless by default). If you do not pass
+`--title` and `--url`, it will submit the most recent post in `_posts/`.
+
+```bash
+npm install
+npx playwright install --with-deps chromium
+HN_PASS="your_hn_password" npm run hn:submit
+
+HN_PASS="your_hn_password" \
+  npm run hn:submit -- --title "Post title" --url "https://example.com"
+
+If you do not set `HN_PASS`, the script will prompt for it. The default username is `sbochins`
+unless you override with `HN_USER` or `--user`.
+```
+
+Pass `--headed` if you want to watch the browser run.

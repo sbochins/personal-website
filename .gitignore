@@ -1,2 +1,6 @@
 AGENTS.md
 _site/
+node_modules/
+playwright/.cache/
+package.json
+scripts/
