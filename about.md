@@ -7,3 +7,5 @@ I'm a Software Engineer at Meta. I previously worked at Google and several other
 
 I'm mostly interested in AI advancements from a software engineering perspective. I'm currently working on ways to make it better and
 ultimately eliminate my livelihood.
+
+The opinions expressed on this blog are my own and do not represent anyone else.
