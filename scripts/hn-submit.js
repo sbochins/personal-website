@@ -16,9 +16,13 @@ const getArg = (name) => {
 };
 
 const hasFlag = (name) => argv.includes(`--${name}`);
+const hasAnyFlag = () => argv.some((arg) => arg.startsWith("--"));
 
-const titleArg = getArg("title");
-const urlArg = getArg("url");
+let titleArg = getArg("title");
+let urlArg = getArg("url");
+if (!hasAnyFlag() && argv.length) {
+  titleArg = argv.join(" ");
+}
 const headed = hasFlag("headed");
 const user = getArg("user") || process.env.HN_USER;
 let pass = getArg("pass") || process.env.HN_PASS;
@@ -38,7 +42,8 @@ const readConfig = () => {
 };
 
 const parseFrontMatter = (content) => {
-  const match = content.match(/^---\\s*\\n([\\s\\S]*?)\\n---\\s*\\n/);
+  const normalized = content.replace(/\r\n/g, "\n");
+  const match = normalized.match(/^---\\s*\\n([\\s\\S]*?)\\n---\\s*\\n/);
   if (!match) return {};
   const block = match[1];
   const titleMatch = block.match(/^title:\\s*(.+)\\s*$/m);
@@ -77,12 +82,21 @@ const buildPostUrl = (postPath) => {
 };
 
 const resolvePostData = () => {
-  if (titleArg && urlArg) {
-    return { title: titleArg, url: urlArg };
-  }
   const latestPath = findLatestPost();
   const contents = fs.readFileSync(latestPath, "utf8");
   const frontMatter = parseFrontMatter(contents);
+  if (titleArg && urlArg) {
+    return { title: titleArg, url: urlArg };
+  }
+  if (titleArg && !urlArg) {
+    return { title: titleArg, url: buildPostUrl(latestPath) };
+  }
+  if (urlArg && !titleArg) {
+    if (!frontMatter.title) {
+      throw new Error("Latest post is missing a title in front matter.");
+    }
+    return { title: frontMatter.title, url: urlArg };
+  }
   if (!frontMatter.title) {
     throw new Error("Latest post is missing a title in front matter.");
   }

@@ -34,6 +34,8 @@ HN_USER="your_hn_username" HN_PASS="your_hn_password" npm run hn:submit
 HN_USER="your_hn_username" HN_PASS="your_hn_password" \
   npm run hn:submit -- --title "Post title" --url "https://example.com"
 
+HN_USER="your_hn_username" npm run hn:submit -- "Post title"
+
 If you do not set `HN_PASS`, the script will prompt for it.
 ```
 
