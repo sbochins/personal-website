@@ -29,13 +29,12 @@ Use the Playwright helper to submit a new post (headless by default). If you do 
 ```bash
 npm install
 npx playwright install --with-deps chromium
-HN_PASS="your_hn_password" npm run hn:submit
+HN_USER="your_hn_username" HN_PASS="your_hn_password" npm run hn:submit
 
-HN_PASS="your_hn_password" \
+HN_USER="your_hn_username" HN_PASS="your_hn_password" \
   npm run hn:submit -- --title "Post title" --url "https://example.com"
 
-If you do not set `HN_PASS`, the script will prompt for it. The default username is `sbochins`
-unless you override with `HN_USER` or `--user`.
+If you do not set `HN_PASS`, the script will prompt for it.
 ```
 
 Pass `--headed` if you want to watch the browser run.
