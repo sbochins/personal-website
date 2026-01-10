@@ -54,9 +54,12 @@ const parseFrontMatter = (content) => {
 
 const findLatestPost = () => {
   const postsDir = path.join(process.cwd(), "_posts");
-  const files = fs.readdirSync(postsDir).filter((file) => file.endsWith(".md"));
+  const files = fs
+    .readdirSync(postsDir)
+    .filter((file) => file.endsWith(".md"))
+    .filter((file) => /^\d{4}-\d{2}-\d{2}-.+\.md$/.test(file));
   if (!files.length) {
-    throw new Error("No posts found in _posts.");
+    throw new Error("No dated posts found in _posts.");
   }
   const latest = files.sort().pop();
   return path.join(postsDir, latest);
