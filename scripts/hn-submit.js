@@ -85,25 +85,14 @@ const resolvePostData = () => {
   const latestPath = findLatestPost();
   const contents = fs.readFileSync(latestPath, "utf8");
   const frontMatter = parseFrontMatter(contents);
-  if (titleArg && urlArg) {
-    return { title: titleArg, url: urlArg };
-  }
-  if (titleArg && !urlArg) {
-    return { title: titleArg, url: buildPostUrl(latestPath) };
-  }
-  if (urlArg && !titleArg) {
-    if (!frontMatter.title) {
-      throw new Error("Latest post is missing a title in front matter.");
-    }
-    return { title: frontMatter.title, url: urlArg };
-  }
-  if (!frontMatter.title) {
+  const defaultTitle = frontMatter.title;
+  const defaultUrl = buildPostUrl(latestPath);
+  const title = titleArg || defaultTitle;
+  const url = urlArg || defaultUrl;
+  if (!title) {
     throw new Error("Latest post is missing a title in front matter.");
   }
-  return {
-    title: frontMatter.title,
-    url: buildPostUrl(latestPath)
-  };
+  return { title, url };
 };
 
 const promptPassword = () =>
@@ -174,5 +163,6 @@ const run = async () => {
 run().catch((err) => {
   console.error(err.message || err);
   console.error("Usage: node scripts/hn-submit.js [--title \"...\"] [--url \"...\"] [--headed]");
+  console.error("Defaults to the latest post when title or url are omitted.");
   process.exit(1);
 });
