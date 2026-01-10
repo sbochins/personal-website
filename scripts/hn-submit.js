@@ -67,8 +67,8 @@ const findLatestPost = () => {
 
 const buildPostUrl = (postPath) => {
   const config = readConfig();
-  const filename = path.basename(postPath);
-  const match = filename.match(/^(\d{4})-(\d{2})-(\d{2})-(.+)\\.md$/);
+  const filename = path.basename(postPath).trim();
+  const match = filename.match(/^(\d{4})-(\d{2})-(\d{2})-(.+)\.md$/);
   if (!match) {
     throw new Error("Post filename must be YYYY-MM-DD-slug.md to build URL.");
   }
